@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect('/api/hello');
+    return redirect('/hello');
 });
+
+Route::get('/hello/{name?}', 'Site\HomeController@hello')->name('hello');
